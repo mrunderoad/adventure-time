@@ -5,11 +5,13 @@ import './css/styles.css';
 // import Player from './js/player.js';
 // import Enemy from './js/enemy.js';
 
-var myGameArea = {
+let myGamePiece;
+
+let myGameArea = {
   canvas : document.createElement("canvas"),
   start : function() {
-    this.canvas.width = 920;
-    this.canvas.height = 270;
+    this.canvas.width = 840;
+    this.canvas.height = 735;
     this.context = this.canvas.getContext("2d");
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
     this.interval = setInterval(updateGameArea, 20);
@@ -48,24 +50,36 @@ function updateGameArea() {
   myGameArea.clear();
   myGamePiece.speedX = 0;
   myGamePiece.speedY = 0;
-  if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -1; }
-  if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX = 1; }
-  if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speedY = -1; }
-  if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 1; }
+  if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -5; }
+  if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX = 5; }
+  if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speedY = -5; }
+  if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 5; }
   myGamePiece.newPos();
   myGamePiece.update();
 }
 
-var myGamePiece;
-myGamePiece;
+// function fight(player, enemy) {
+//   let turn = true;
+//   if (turn === true) {
+//     player.playerAttack();
+//     turn = !turn;
+//   }else if (turn = false) {
+//     enemy.enemyAttack();
+//     turn = !turn;
+//   }
+// }
 
-
+// function displayPlayer(player) {
+//   $(".name").html(player.name);
+//   $(".hp").html(player.hp);
+// }
 
 $(document).ready(function() {
   myGameArea.start();
   myGamePiece = new component(30, 30, "red", 10, 120);
-  //let Finn = new Player(50, "Sword");
-  //let Jake = new Player(50, "Fist");
+  $( ".col-md-8" ).append( myGameArea.canvas);
+  //let Finn = new Player("Finn", 50, "Sword");
+  //let Jake = new Player("Jake", 50, "Fist");
   //let Gnome1 = new Enemy(15);
   //let Gnome2 = new Enemy(15);
   //let Gnome3 = new Enemy(15);

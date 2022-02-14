@@ -1,5 +1,6 @@
 export default class Player {
-  constructor(hp, weapon) {
+  constructor(name, hp, weapon) {
+    this.name = name;
     this.hp = hp;
     this.weapon = weapon;
     this.inventory = [];

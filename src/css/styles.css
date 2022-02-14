@@ -15,16 +15,23 @@ footer {
 
 .col-md-8 {
   background-color: bisque;
-  background-image: url("https://nintenfan.com/wp-content/uploads/2017/12/Adventure-Time-Pirates-Of-The-Enchiridion-Screenshot-Candy-Kingdom.png");
+  /* background-image: url("https://nintenfan.com/wp-content/uploads/2017/12/Adventure-Time-Pirates-Of-The-Enchiridion-Screenshot-Candy-Kingdom.png"); */
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.start-screen {
+
+}
+
+
 
 .col-md-2 {
   background-color: aqua;
 }
 
 canvas {
-  border: 1px solid #d3d3d3;
-  background-color: #f1f1f1;
+  border: 4px solid rgb(28, 128, 33);
+  border-radius: 10px;
+  background-color: #f1f1f100;
 }
