@@ -1,0 +1,30 @@
+.jumbotron {
+  background-color: rgb(97, 58, 58);
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+}
+
+footer {
+  background-color: rgb(238, 156, 156);
+}
+
+.row {
+  height: 75vh
+}
+
+.col-md-8 {
+  background-color: bisque;
+  background-image: url("https://nintenfan.com/wp-content/uploads/2017/12/Adventure-Time-Pirates-Of-The-Enchiridion-Screenshot-Candy-Kingdom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.col-md-2 {
+  background-color: aqua;
+}
+
+canvas {
+  border: 1px solid #d3d3d3;
+  background-color: #f1f1f1;
+}
